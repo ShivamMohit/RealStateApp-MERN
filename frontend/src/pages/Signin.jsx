@@ -27,7 +27,7 @@ export const Signin = () => {
       });
       const data = await res.json();
       console.log(data);
-      if (data.success === false) {
+      if (!res.ok) {
         setLoading(false);
         setError(data.message);
         return;
